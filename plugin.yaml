@@ -1,0 +1,22 @@
+plugin:
+    name: 'paul.agencypages::lang.plugin.name'
+    description: 'paul.agencypages::lang.plugin.description'
+    author: paul
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    Showcase:
+        label: 'paul.agencypages::lang.plugin.title'
+        url: paul/agencypages/showcase
+        icon: icon-life-ring
+        permissions:
+            - showcase.manage_items
+        sideMenu:
+            Items:
+                label: Items
+                url: paul/agencypages/showcase
+                icon: icon-sort-alpha-asc
+permissions:
+    showcase.manage_items:
+        tab: 'paul.agencypages::lang.plugin.name'
+        label: 'paul.agencypages::lang.item.manage_books'

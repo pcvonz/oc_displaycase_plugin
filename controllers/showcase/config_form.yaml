@@ -1,0 +1,11 @@
+name: Showcase
+modelClass: Paul\AgencyPages\Models\Item
+form: $/paul/agencypages/models/item/fields.yaml
+defaultRedirect: paul/agencypages/showcase
+create:
+    redirect: 'paul/agencypages/showcase/update/:id'
+    redirectClose: paul/agencypages/showcase
+update:
+    redirect: paul/agencypages/showcase
+    redirectClose: paul/agencypages/showcase
+preview: {  }

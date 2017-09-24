@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table paul_agencypages_data'
+    - builder_table_create_paul_agencypages_data.php
+1.0.3:
+    - 'Updated table paul_agencypages_data'
+    - builder_table_update_paul_agencypages_data.php
+1.0.4:
+    - 'Updated table paul_agencypages_data'
+    - builder_table_update_paul_agencypages_data_2.php
+1.0.5:
+    - 'Updated table paul_agencypages_data'
+    - builder_table_update_paul_agencypages_data_3.php

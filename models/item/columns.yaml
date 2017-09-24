@@ -1,0 +1,23 @@
+columns:
+    title:
+        label: 'paul.agencypages::lang.item.title'
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: 'paul.agencypages::lang.plugin.description'
+        type: text
+        searchable: true
+    tags:
+        label: 'paul.agencypages::lang.item.tags'
+        type: text
+        searchable: true
+        sortable: true
+    categories:
+        label: 'paul.agencypages::lang.item.categories'
+        type: text
+        searchable: true
+        sortable: true
+    image:
+        label: 'paul.agencypages::lang.item.image'
+        type: text

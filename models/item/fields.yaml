@@ -1,0 +1,41 @@
+fields:
+    title:
+        label: 'paul.agencypages::lang.item.title'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    tags:
+        label: 'paul.agencypages::lang.item.tags'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    description:
+        label: 'paul.agencypages::lang.item.description'
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        type: richeditor
+    image:
+        label: 'paul.agencypages::lang.item.image'
+        oc.commentPosition: ''
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    categories:
+        label: 'paul.agencypages::lang.item.categories'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    slug:
+        label: 'paul.agencypages::lang.item.slug'
+        oc.commentPosition: ''
+        span: auto
+        required: 0
+        trigger:
+            action: ''
+            field: title
+        type: text
