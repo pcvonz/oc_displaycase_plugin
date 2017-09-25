@@ -1,6 +1,7 @@
-list: $/vonzimmerman/displaycase/models/tags/columns.yaml
-modelClass: Vonzimmerman\DisplayCase\Models\Tags
-title: Tags
+title: Items
+modelClass: Vonzimmerman\DisplayCase\Models\Item
+list: $/vonzimmerman/displaycase/models/item/columns.yaml
+recordUrl: 'vonzimmerman/displaycase/items/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
 showCheckboxes: true
@@ -8,4 +9,3 @@ toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
-recordUrl: 'vonzimmerman/displaycase/tags/update/:id'

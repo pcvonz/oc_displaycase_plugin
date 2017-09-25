@@ -1,8 +1,8 @@
 <?php return [
     'plugin' => [
-        'name' => 'oc_agency_pages_plugin',
+        'name' => 'oc_display_case_plugin',
         'description' => '',
-        'title' => 'Showcase',
+        'title' => 'Display Case',
     ],
     'item' => [
         'title' => 'Title',

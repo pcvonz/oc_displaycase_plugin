@@ -1,4 +1,4 @@
-<?php namespace Paul\AgencyPages;
+<?php namespace Vonzimmerman\DisplayCase;
 
 use System\Classes\PluginBase;
 

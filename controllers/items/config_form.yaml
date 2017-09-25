@@ -1,0 +1,10 @@
+name: Items
+form: $/vonzimmerman/displaycase/models/item/fields.yaml
+modelClass: Vonzimmerman\DisplayCase\Models\Item
+defaultRedirect: vonzimmerman/displaycase/items
+create:
+    redirect: 'vonzimmerman/displaycase/items/update/:id'
+    redirectClose: vonzimmerman/displaycase/items
+update:
+    redirect: vonzimmerman/displaycase/items
+    redirectClose: vonzimmerman/displaycase/items

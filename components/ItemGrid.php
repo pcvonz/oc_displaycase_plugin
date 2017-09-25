@@ -1,4 +1,4 @@
-<?php namespace Paul\Agencypages\Components;
+<?php namespace Vonzimmerman\DisplayCase\Components;
 
 use Cms\Classes\ComponentBase;
 

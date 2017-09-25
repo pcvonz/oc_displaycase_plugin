@@ -1,4 +1,4 @@
-<?php namespace Paul\AgencyPages\Models;
+<?php namespace Vonzimmerman\DisplayCase\Models;
 
 use Model;
 
@@ -24,12 +24,12 @@ class Tags extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'paul_agencypages_tag';
+    public $table = 'vonzimmerman_displaycase_tag';
     
     public $belongsToMany = [
         'items' => [
-            'Paul\AgencyPages\Models\Item', 
-            'table' => 'paul_agencypages_tagmap'
+            'Vonzimmerman\DisplayCase\Models\Item', 
+            'table' => 'vonzimmerman_displaycase_tagmap'
         ]
     ];
 }

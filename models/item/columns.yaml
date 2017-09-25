@@ -1,21 +1,21 @@
 columns:
     title:
-        label: 'paul.agencypages::lang.item.title'
+        label: 'vonzimmerman.displaycase::lang.item.title'
         type: text
         searchable: true
         sortable: true
     description:
-        label: 'paul.agencypages::lang.item.description'
+        label: 'vonzimmerman.displaycase::lang.item.description'
         type: text
         searchable: true
     tags:
-        label: 'paul.agencypages::lang.item.tags'
+        label: 'vonzimmerman.displaycase::lang.item.tags'
         relation: tags
         select: name
         searchable: true
         sortable: true
     published:
-      label: 'paul.agencypages::lang.item.published'
+      label: 'vonzimmerman.displaycase::lang.item.published'
       type: text
       searchable: true
       sortable: true

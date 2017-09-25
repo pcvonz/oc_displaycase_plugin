@@ -1,10 +1,10 @@
 name: Tags
-form: $/paul/agencypages/models/tags/fields.yaml
-modelClass: Paul\AgencyPages\Models\Tags
-defaultRedirect: paul/agencypages/tags
+form: $/vonzimmerman/displaycase/models/tags/fields.yaml
+modelClass: Vonzimmerman\DisplayCase\Models\Tags
+defaultRedirect: vonzimmerman/displaycase/tags
 create:
-    redirect: 'paul/agencypages/tags/update/:id'
-    redirectClose: paul/agencypages/tags
+    redirect: 'vonzimmerman/displaycase/tags/update/:id'
+    redirectClose: vonzimmerman/displaycase/tags
 update:
-    redirect: paul/agencypages/tags
-    redirectClose: paul/agencypages/tags
+    redirect: vonzimmerman/displaycase/tags
+    redirectClose: vonzimmerman/displaycase/tags
