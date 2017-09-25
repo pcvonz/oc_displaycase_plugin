@@ -4,38 +4,62 @@ fields:
         oc.commentPosition: ''
         span: auto
         type: text
-    tags:
-        label: 'paul.agencypages::lang.item.tags'
-        oc.commentPosition: ''
-        span: auto
-        type: text
-    description:
-        label: 'paul.agencypages::lang.item.description'
-        size: ''
-        oc.commentPosition: ''
-        span: auto
-        type: richeditor
-    image:
-        label: 'paul.agencypages::lang.item.image'
-        oc.commentPosition: ''
-        mode: file
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: auto
-        type: fileupload
-    categories:
-        label: 'paul.agencypages::lang.item.categories'
-        oc.commentPosition: ''
-        span: auto
-        type: text
     slug:
         label: 'paul.agencypages::lang.item.slug'
         oc.commentPosition: ''
         span: auto
         required: 0
         trigger:
-            action: ''
-            field: title
+            action: show
+            field: slug
+            condition: checked
         type: text
+    banner:
+        label: 'paul.agencypages::lang.item.banner'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    thumbnail:
+        label: 'paul.agencypages::lang.item.thumbnail'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    screenshot:
+        label: 'paul.agencypages::lang.item.screenshot'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    description:
+        label: 'paul.agencypages::lang.item.description'
+        size: ''
+        oc.commentPosition: ''
+        span: full
+        type: richeditor
+    tags:
+        label: 'paul.agencypages::lang.item.tags'
+        type: taglist
+        mode: relation
+        customTags: false
+        separator: space
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+    published:
+        label: 'paul.agencypages::lang.item.published'
+        span: auto
+        type: switch

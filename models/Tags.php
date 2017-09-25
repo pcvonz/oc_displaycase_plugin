@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class Sort extends Model
+class Tags extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
@@ -24,5 +24,12 @@ class Sort extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'paul_agencypages_data';
+    public $table = 'paul_agencypages_tag';
+    
+    public $belongsToMany = [
+        'items' => [
+            'Paul\AgencyPages\Models\Item', 
+            'table' => 'paul_agencypages_tagmap'
+        ]
+    ];
 }

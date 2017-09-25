@@ -3,12 +3,9 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 
-class Showcase extends Controller
+class Tags extends Controller
 {
-    public $implement = [
-        'Backend\Behaviors\ListController',
-        'Backend\Behaviors\FormController'
-    ];
+    public $implement = ['Backend\Behaviors\ListController','Backend\Behaviors\FormController'];
     
     public $listConfig = 'config_list.yaml';
     public $formConfig = 'config_form.yaml';
@@ -16,6 +13,6 @@ class Showcase extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Paul.AgencyPages', 'Showcase', 'Items');
+        BackendMenu::setContext('Paul.AgencyPages', 'Showcase', 'side-menu-item');
     }
 }

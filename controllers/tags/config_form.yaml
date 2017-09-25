@@ -1,0 +1,10 @@
+name: Tags
+form: $/paul/agencypages/models/tags/fields.yaml
+modelClass: Paul\AgencyPages\Models\Tags
+defaultRedirect: paul/agencypages/tags
+create:
+    redirect: 'paul/agencypages/tags/update/:id'
+    redirectClose: paul/agencypages/tags
+update:
+    redirect: paul/agencypages/tags
+    redirectClose: paul/agencypages/tags

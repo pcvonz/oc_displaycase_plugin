@@ -16,6 +16,10 @@ navigation:
                 label: Items
                 url: paul/agencypages/showcase
                 icon: icon-sort-alpha-asc
+            side-menu-item:
+                label: 'paul.agencypages::lang.item.tags'
+                url: paul/agencypages/tags
+                icon: icon-tag
 permissions:
     showcase.manage_items:
         tab: 'paul.agencypages::lang.plugin.name'

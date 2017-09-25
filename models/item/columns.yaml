@@ -5,19 +5,17 @@ columns:
         searchable: true
         sortable: true
     description:
-        label: 'paul.agencypages::lang.plugin.description'
+        label: 'paul.agencypages::lang.item.description'
         type: text
         searchable: true
     tags:
         label: 'paul.agencypages::lang.item.tags'
-        type: text
+        relation: tags
+        select: name
         searchable: true
         sortable: true
-    categories:
-        label: 'paul.agencypages::lang.item.categories'
-        type: text
-        searchable: true
-        sortable: true
-    image:
-        label: 'paul.agencypages::lang.item.image'
-        type: text
+    published:
+      label: 'paul.agencypages::lang.item.published'
+      type: text
+      searchable: true
+      sortable: true

@@ -1,0 +1,6 @@
+fields:
+    name:
+        label: 'paul.agencypages::lang.item.tag'
+        oc.commentPosition: ''
+        span: auto
+        type: text

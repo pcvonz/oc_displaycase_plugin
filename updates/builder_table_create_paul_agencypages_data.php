@@ -12,13 +12,13 @@ class BuilderTableCreatePaulAgencypagesData extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('description')->nullable();
+            $table->string('url')->nullable();
             $table->string('tags')->nullable();
-            $table->binary('image');
-            $table->string('categories')->nullable();
+            $table->string('license')->nullable();
             $table->string('title')->nullable();
-            $table->text('description')->nullable();
             $table->string('slug')->nullable();
             $table->dateTime('date_added')->nullable();
+            $table->boolean('published')->nullable()->default(0);
         });
     }
     

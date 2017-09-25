@@ -1,0 +1,4 @@
+columns:
+    name:
+        label: 'paul.agencypages::lang.item.tag'
+        type: text

@@ -11,6 +11,14 @@
         'image' => 'Image',
         'categories' => 'Categories',
         'slug' => 'Slug',
-        'manage_books' => 'Manage Books',
+        'tag' => 'Tag',
+        'manage' => 'Manage Items',
+        'published' => 'Published',
+        'banner' => 'Banner',
+        'screenshot' => 'Screenshots',
+        'thumbnail' => 'Thumbnail',
+    ],
+    'tags' => [
+        'add' => 'Add Tags',
     ],
 ];

@@ -25,4 +25,19 @@ class Item extends Model
      * @var string The database table used by the model.
      */
     public $table = 'paul_agencypages_data';
+
+    public $attachMany = [
+        'screenshot' => 'System\Models\File'
+    ];
+
+    public $attachOne= [
+        'banner' => 'System\Models\File',
+        'thumbnail' => 'System\Models\File'
+    ];
+    public $belongsToMany = [
+        'tags' => [
+            'Paul\AgencyPages\Models\Tags', 
+            'table' => 'paul_agencypages_tagmap'
+        ]
+    ];
 }
