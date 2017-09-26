@@ -1,6 +1,6 @@
 <?php return [
     'plugin' => [
-        'name' => 'oc_display_case_plugin',
+        'name' => 'Display Case',
         'description' => '',
         'title' => 'Display Case',
     ],

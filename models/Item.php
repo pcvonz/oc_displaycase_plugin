@@ -37,7 +37,7 @@ class Item extends Model
     public $belongsToMany = [
         'tags' => [
             'Vonzimmerman\DisplayCase\Models\Tags', 
-            'table' => 'vonzimmerman_displaycase_tagmap'
+            'table'    => 'vonzimmerman_displaycase_tagmap'
         ]
     ];
 }

@@ -32,4 +32,5 @@ class Tags extends Model
             'table' => 'vonzimmerman_displaycase_tagmap'
         ]
     ];
+
 }
