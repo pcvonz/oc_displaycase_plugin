@@ -1,0 +1,14 @@
+<div class="carousel">
+    {% for item in items %}
+    <div class ="feature-item item">
+        <div class="title">
+            <h1>{{ item.id }} -  {{ item.title }}</h1>
+        </div>
+        <img src="{{ item.banner.path }}"></img>
+        <div class="description">
+            {{ item.description | raw }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+

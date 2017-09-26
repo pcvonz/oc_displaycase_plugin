@@ -34,23 +34,23 @@ class FeaturedPage extends ComponentBase
     }
 
     public function onRun(){
-        $this->page['id'] = 0;
+        $this->requestItems();
+
+        $this->addCss('/plugins/vonzimmerman/displaycase/assets/style.css');
+
+        $this->addJs('/plugins/vonzimmerman/displaycase/assets/slick/slick.js');
+        $this->addCss('/plugins/vonzimmerman/displaycase/assets/slick/slick.css');
+        $this->addCss('/plugins/vonzimmerman/displaycase/assets/slick/slick-theme.css');
+
+        $this->addJs('/plugins/vonzimmerman/displaycase/assets/featuredpage.js');
     }
 
-    public function onRequestNext(){
-        $nextId = post('id');
-        $items = $this->requestItems($nextId, $this->property('displayCount'));
-        $this->page['id']    = end($items)[0]['id'];
+    private function requestItems(){
+
+        $items = Item::with(['tags', 'screenshot', 'banner', 'thumbnail'])->whereHas('tags', 
+            $this->matchTag)->get();
+
         $this->page['items'] = $items;
-        
-    }
-
-    private function requestItems($id, $count){
-
-        $items = Item::with(['tags', 'screenshot', 'banner', 'thumbnail'])->where('id', '>', $id)->whereHas('tags', 
-            $this->matchTag)->limit($count)->get();
-
-        return $items;
 
     }
 
