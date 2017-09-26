@@ -1,3 +1,77 @@
-<p>This is the default markup for component ItemGrid</p>
+<div id='itemGrid'>
+  {% partial 'itemGrid::_items' %}
+</div>
 
-<small>You can delete this file if you want</small>
+<div id="infiniLoader">Loading</div>
+
+<script>
+var initialOffset = {{ initialOffset }};
+var offset = 1;
+var endOfPage = false;
+$('#infiniloader').hide();
+
+function initPage () {
+  if (!endOfPage){
+    $.request('onUpdatePartial', {
+      data: {skip: initialOffset * offset},
+      loading: '#infiniLoader',
+      success: function(data) {
+        onSuccess(data);
+        var percScrolled = w.scrollTop() / (d.height() - w.height())
+        console.log(percScrolled);
+        if (Number.isNaN(percScrolled)) {
+          console.log('grabbing');
+          initPage();
+        }
+      }
+    });
+    //offset += 1
+  }
+}
+function updatePage () {
+  if (!endOfPage){
+    $.request('onUpdatePartial', {
+      data: {skip: initialOffset * offset},
+      loading: '#infiniLoader',
+      success: function (data) {
+        onSuccess(data) 
+      }
+    });
+    //offset += 1
+  }
+}
+
+function onSuccess (data) {
+  $.each(data, function (index, value) {
+    $('#itemGrid').append(value);
+  });
+  // if (data['.itemContainer'] == '') {
+  //   endOfPage = true;
+  // }
+}
+var w = $(window);
+var d = $(document);
+w.scroll(infiniScroll);
+function infiniScroll () {
+  var percScrolled = w.scrollTop() / (d.height() - w.height())
+
+  if (percScrolled === 1) {
+    updatePage();
+  }
+}
+
+initPage();
+</script>
+
+<style>
+.itemRow{
+  width: 100%;
+  float: left;
+  clear: both;
+}
+.item {
+  width: 20%;
+  display: block;
+  float: left;
+}
+</style>
