@@ -46,7 +46,7 @@ fields:
         size: ''
         oc.commentPosition: ''
         span: full
-        type: richeditor
+        type: richtexttoc
     tags:
         label: 'vonzimmerman.displaycase::lang.item.tags'
         type: taglist

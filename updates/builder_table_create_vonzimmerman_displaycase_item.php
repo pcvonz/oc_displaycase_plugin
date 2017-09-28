@@ -3,15 +3,16 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableCreateVonzimmermanDisplayCaseData extends Migration
+class BuilderTableCreateVonzimmermanDisplayCaseItem extends Migration
 {
     public function up()
     {
-        Schema::create('vonzimmerman_displaycase_data', function($table)
+        Schema::create('vonzimmerman_displaycase_item', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->text('description')->nullable();
+            $table->text('short_description')->nullable();
             $table->string('url')->nullable();
             $table->string('tags')->nullable();
             $table->string('license')->nullable();
@@ -24,6 +25,6 @@ class BuilderTableCreateVonzimmermanDisplayCaseData extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('vonzimmerman_displaycase_data');
+        Schema::dropIfExists('vonzimmerman_displaycase_item');
     }
 }

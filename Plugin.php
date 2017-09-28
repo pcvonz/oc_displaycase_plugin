@@ -24,6 +24,12 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerFormWidgets()
+    {
+        return [
+            'Vonzimmerman\DisplayCase\FormWidgets\RichTextToc' => 'richtexttoc'
+        ];
+    }
     public function registerSettings()
     {
     }
