@@ -9,10 +9,7 @@ fields:
         oc.commentPosition: ''
         span: auto
         required: 0
-        trigger:
-            action: show
-            field: slug
-            condition: checked
+        preset: title
         type: text
     banner:
         label: 'vonzimmerman.displaycase::lang.item.banner'

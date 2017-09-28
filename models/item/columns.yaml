@@ -4,18 +4,19 @@ columns:
         type: text
         searchable: true
         sortable: true
-    description:
-        label: 'vonzimmerman.displaycase::lang.item.description'
+    slug:
+        label: 'vonzimmerman.displaycase::lang.item.slug'
         type: text
         searchable: true
     tags:
         label: 'vonzimmerman.displaycase::lang.item.tags'
-        relation: tags
-        select: name
+        type: text
         searchable: true
         sortable: true
+        select: name
+        relation: tags
     published:
-      label: 'vonzimmerman.displaycase::lang.item.published'
-      type: text
-      searchable: true
-      sortable: true
+        label: 'vonzimmerman.displaycase::lang.item.published'
+        type: text
+        searchable: true
+        sortable: true

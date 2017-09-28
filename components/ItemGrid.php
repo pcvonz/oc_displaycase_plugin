@@ -67,19 +67,22 @@ class ItemGrid extends ComponentBase
     public function onUpdatePartial() 
     {
         $items = $this->queryDb(post('skip'));
+        $pageId = $this->param('page_id');
+        $this->page['page_id'] = $pageId+1;
         $this->page['items'] = $items;
         return [
             '.itemContainer' => $this->renderPartial('@_items.htm')
         ];
     }
-    public function onAdd()
-    {
-    }
     public function onRun()
     {
         // Router param
-        $pageId = $this->param('page_id');
+        $this->addJs('/plugins/vonzimmerman/displaycase/assets/bower_components/jscroll/jquery.jscroll.js');
+        $this->addJs('/plugins/vonzimmerman/displaycase/assets/javscript/ItemGrid.js');
+        $this->addCss('/plugins/vonzimmerman/displaycase/assets/css/ItemGrid.css');
         $items = $this->queryDb(0);
+        $pageId = $this->param('page_id');
+        $this->page['page_id'] = $pageId+1;
         $this->page['initialOffset'] = $this->property('limit');
         $this->page['items'] = $items;
     }

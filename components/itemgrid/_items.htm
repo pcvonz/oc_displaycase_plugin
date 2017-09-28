@@ -6,6 +6,7 @@
         <h2> {{ item.title }} </h2>
       </div>
     {% endfor %}
+    <a class="nextPage" href="http://localhost:8000/test/{{ page_id }}"> Next Page </a>
 </div>
 {% endif %}
 {% if items|length == 0 %}

@@ -1,0 +1,19 @@
+#itemGrid {
+  height: 300px;
+}
+.itemRow{
+  width: 100%;
+  float: left;
+  clear: both;
+  height: 300px;
+}
+.item {
+  width: 20%;
+  display: block;
+  float: left;
+  height: 300px;
+}
+
+.jscroll-added {
+  height: 300px;
+}
