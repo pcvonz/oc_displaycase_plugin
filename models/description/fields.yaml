@@ -1,0 +1,12 @@
+fields:
+    descr_title:
+        label: 'vonzimmerman.displaycase::lang.description.title'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    descr:
+        label: 'vonzimmerman.displaycase::lang.description.section'
+        size: ''
+        oc.commentPosition: ''
+        span: full
+        type: richeditor

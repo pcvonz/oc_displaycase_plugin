@@ -1,0 +1,9 @@
+description:
+    label: 'vonzimmerman.displaycase::lang.item.description'
+    form: $/vonzimmerman/displaycase/models/description/fields.yaml
+    list: $/vonzimmerman/displaycase/models/description/columns.yaml
+    manage:
+      context: relation
+    defaultSort:
+      column: sort_order
+      direction: asc

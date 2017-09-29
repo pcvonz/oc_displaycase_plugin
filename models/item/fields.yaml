@@ -41,12 +41,6 @@ fields:
             extension: auto
         span: auto
         type: fileupload
-    description:
-        label: 'vonzimmerman.displaycase::lang.item.description'
-        size: ''
-        oc.commentPosition: ''
-        span: full
-        type: richtexttoc
     tags:
         label: 'vonzimmerman.displaycase::lang.item.tags'
         type: taglist
@@ -56,6 +50,12 @@ fields:
         size: ''
         oc.commentPosition: ''
         span: auto
+    description:
+        label: Descriptions
+        commentAbove: RelationController used as a partial field type.
+        type: partial
+        tab: Comments
+
     published:
         label: 'vonzimmerman.displaycase::lang.item.published'
         span: auto

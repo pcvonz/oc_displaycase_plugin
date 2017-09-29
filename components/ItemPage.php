@@ -2,6 +2,7 @@
 
 use Cms\Classes\ComponentBase;
 use Vonzimmerman\DisplayCase\Models\Item as Item;
+use Vonzimmerman\DisplayCase\Models\Description as description;
 
 class ItemPage extends ComponentBase
 {
@@ -28,7 +29,7 @@ class ItemPage extends ComponentBase
     }
     public function queryDb($pageName)
     {
-        return Item::with(['tags', 'screenshot', 'banner', 'thumbnail'])
+        return Item::with(['tags', 'screenshot', 'banner', 'thumbnail', 'description'])
             ->where('published', 1)
             ->where('slug', $pageName)
             ->first();
@@ -36,5 +37,14 @@ class ItemPage extends ComponentBase
     public function item ()
     {
         return $this->queryDb($this->property('project'));
+    }
+    public function description ()
+     {
+         $item = Item::with(['description'])
+             ->where('slug', $this->property('project'))
+             ->where('published', 1)
+             ->first();
+        $descriptions = $item->description()->get();
+        return $descriptions;
     }
 }

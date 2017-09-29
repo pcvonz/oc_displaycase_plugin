@@ -22,3 +22,7 @@ navigation:
                 label: 'vonzimmerman.displaycase::lang.item.manage'
                 url: vonzimmerman/displaycase/items
                 icon: icon-film
+            Sections:
+                label: 'vonzimmerman.displaycase::lang.description.section'
+                url: vonzimmerman/displaycase/description
+                icon: icon-sitemap

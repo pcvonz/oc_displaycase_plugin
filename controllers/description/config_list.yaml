@@ -1,0 +1,11 @@
+list: $/vonzimmerman/displaycase/models/description/columns.yaml
+modelClass: Vonzimmerman\DisplayCase\Models\Description
+title: Description
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: reorder
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'vonzimmerman/displaycase/description/update/:id'

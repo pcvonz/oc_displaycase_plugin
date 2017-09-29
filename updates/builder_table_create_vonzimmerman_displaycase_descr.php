@@ -11,7 +11,10 @@ class BuilderTableCreateVonzimmermanDisplayCaseDescr extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('descr');
+            $table->string('descr_title');
+            $table->integer('sort_order')->unsigned();
+            $table->integer('item_id')->unsigned()->nullable()->index();
+            $table->text('descr');
         });
     }
     

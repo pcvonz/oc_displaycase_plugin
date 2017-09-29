@@ -1,0 +1,16 @@
+columns:
+    descr_title:
+        label: 'vonzimmerman.displaycase::lang.description.title'
+        type: text
+    descr:
+        label: 'vonzimmerman.displaycase::lang.description.section'
+        type: text
+    sort_order:
+      type: number
+    sort_order_handle:
+      label: " "
+      type: partial
+      path: $/vonzimmerman/displaycase/models/description/_reorder_handle.htm
+      sortable: false
+      width: 120px
+      height: 60px

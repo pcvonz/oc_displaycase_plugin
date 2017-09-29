@@ -21,4 +21,8 @@
     'tags' => [
         'add' => 'Add Tags',
     ],
+    'description' => [
+        'section' => 'Section',
+        'title' => 'Title',
+    ],
 ];

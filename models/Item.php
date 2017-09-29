@@ -1,6 +1,7 @@
 <?php namespace Vonzimmerman\DisplayCase\Models;
 
 use Model;
+use Vonzimmerman\DisplayCase\Models\Description as Description;
 
 /**
  * Model
@@ -21,10 +22,11 @@ class Item extends Model
     public $rules = [
     ];
 
+
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'vonzimmerman_displaycase_data';
+    public $table = 'vonzimmerman_displaycase_item';
 
     public $attachMany = [
         'screenshot' => 'System\Models\File'
@@ -33,6 +35,9 @@ class Item extends Model
     public $attachOne= [
         'banner' => 'System\Models\File',
         'thumbnail' => 'System\Models\File'
+    ];
+    public $hasMany = [
+        'description' => 'Vonzimmerman\DisplayCase\Models\Description'
     ];
     public $belongsToMany = [
         'tags' => [

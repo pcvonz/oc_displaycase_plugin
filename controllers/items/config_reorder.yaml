@@ -1,0 +1,18 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: Reorder Categories
+
+# Attribute name
+nameFrom: title
+
+# Model Class name
+modelClass: Vonzimmerman\DisplayCase\Models\Description
+
+# Toolbar widget configuration
+#toolbar:
+#    # Partial for toolbar buttons
+#    buttons: reorder_toolbar
+#
