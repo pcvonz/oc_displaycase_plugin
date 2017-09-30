@@ -1,0 +1,19 @@
+<div data-control="toolbar">
+
+    <?php foreach ($relationToolbarButtons as $button): ?>
+
+        <?php if ($button == 'update'): ?>
+            <?= $this->relationMakePartial('button_update', [
+                'relationManageId' => $relationViewModel->id
+            ]) ?>
+        <?php else: ?>
+            <?= $this->relationMakePartial('button_'.$button) ?>
+        <?php endif ?>
+
+    <?php endforeach ?>
+    <a id="reorderButton"
+        class="btn btn-sm btn-secondary oc-icon-arrows">
+        Reorder
+    </a>
+</div>
+

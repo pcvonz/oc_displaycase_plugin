@@ -1,9 +1,11 @@
 description:
     label: 'vonzimmerman.displaycase::lang.item.description'
-    form: $/vonzimmerman/displaycase/models/description/fields.yaml
-    list: $/vonzimmerman/displaycase/models/description/columns.yaml
     manage:
       context: relation
+      form: $/vonzimmerman/displaycase/models/description/fields.yaml
     defaultSort:
       column: sort_order
       direction: asc
+    view:
+      list: $/vonzimmerman/displaycase/models/description/columns.yaml
+      toolbarPartial: relation_toolbar
