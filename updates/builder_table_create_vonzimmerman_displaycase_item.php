@@ -11,7 +11,7 @@ class BuilderTableCreateVonzimmermanDisplayCaseItem extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->text('description')->nullable();
+            $table->text('sections')->nullable();
             $table->text('short_description')->nullable();
             $table->string('url')->nullable();
             $table->string('tags')->nullable();

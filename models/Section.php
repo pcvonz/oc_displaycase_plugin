@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class Description extends Model
+class Section extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sortable;
@@ -26,7 +26,7 @@ class Description extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'vonzimmerman_displaycase_descr';
+    public $table = 'vonzimmerman_displaycase_section';
     public $belongsTo = [
         'item' => 'Vonzimmerman\DisplayCase\Models\Item'
     ];

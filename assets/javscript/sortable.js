@@ -1,28 +1,31 @@
+var sort;
 function initializeSorting() {
     var $tbody = $('.drag-handle').parents('table.data tbody');
-    sort = Sortable.create($tbody[0], {
-        handle: '.drag-handle',
-        animation: 150,
-        onEnd: function (evt) {
-            var $inputs = $('.index_reposition').map(function () {
-              return $(this).val(); 
-            }).get();
-            $.request('onReorder', {
-              data: {vals: $inputs},
-              success: initializeSorting()
-            });
-        }
-    });
+    if($tbody.length > 0) {
+      sort = Sortable.create($tbody[0], {
+          handle: '.drag-handle',
+          animation: 150,
+          onEnd: function (evt) {
+              var $inputs = $('.index_reposition').map(function () {
+                return $(this).val(); 
+              }).get();
+              $.request('onReorder', {
+                data: {vals: $inputs},
+                success: initializeSorting()
+              });
+          }
+      });
+    }
 
 }
 
 
 $(window).ready(function (){
-  var sort;
-  var target = document.querySelector('#Items-update-RelationController-description');
+  var target = $("[id$=-RelationController-section]").get()[0];
   console.log(target);
-  //observer stuff
   initializeSorting();
+  
+  //Mutation Observer
   var observer = new MutationObserver(function(mutations) {
     initializeSorting();
   });

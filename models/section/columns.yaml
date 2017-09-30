@@ -1,0 +1,15 @@
+columns:
+    section_title:
+        label: 'vonzimmerman.displaycase::lang.section.title'
+        type: text
+        sortable: false
+    sort_order:
+      type: number
+      invisible: true
+    sort_order_handle:
+      label: " "
+      type: partial
+      path: $/vonzimmerman/displaycase/models/section/_reorder_handle.htm
+      sortable: false
+      width: 120px
+      height: 60px

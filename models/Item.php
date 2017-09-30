@@ -1,7 +1,7 @@
 <?php namespace Vonzimmerman\DisplayCase\Models;
 
 use Model;
-use Vonzimmerman\DisplayCase\Models\Description as Description;
+use Vonzimmerman\DisplayCase\Models\Section as Section;
 
 /**
  * Model
@@ -37,7 +37,7 @@ class Item extends Model
         'thumbnail' => 'System\Models\File'
     ];
     public $hasMany = [
-        'description' => 'Vonzimmerman\DisplayCase\Models\Description'
+        'section' => 'Vonzimmerman\DisplayCase\Models\Section'
     ];
     public $belongsToMany = [
         'tags' => [

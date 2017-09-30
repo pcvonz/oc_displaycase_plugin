@@ -11,6 +11,11 @@ fields:
         required: 0
         preset: title
         type: text
+    short_description:
+        label: 'vonzimmerman.displaycase::lang.item.short_description'
+        oc.commentPosition: ''
+        span: auto
+        type: richeditor
     banner:
         label: 'vonzimmerman.displaycase::lang.item.banner'
         oc.commentPosition: ''
@@ -50,7 +55,7 @@ fields:
         size: ''
         oc.commentPosition: ''
         span: auto
-    description:
+    section:
         label: Descriptions
         commentAbove: RelationController used as a partial field type.
         type: partial

@@ -17,11 +17,13 @@
         'banner' => 'Banner',
         'screenshot' => 'Screenshots',
         'thumbnail' => 'Thumbnail',
+        'section' => 'Section',
+        'short_description' => 'Short Description',
     ],
     'tags' => [
         'add' => 'Add Tags',
     ],
-    'description' => [
+    'section' => [
         'section' => 'Section',
         'title' => 'Title',
     ],

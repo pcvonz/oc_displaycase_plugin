@@ -2,7 +2,7 @@
 
 use Backend\Classes\Controller;
 use BackendMenu;
-use Vonzimmerman\DisplayCase\Models\Description as Description;
+use Vonzimmerman\DisplayCase\Models\Section as Section;
 use Flash;
 use Event;
 class Items extends Controller
@@ -35,7 +35,7 @@ class Items extends Controller
         $position = 0;
         $moved = [];
         foreach ($records as $id) {
-            if(in_array($id, $moved) || !$desc = Description::find($id))
+            if(in_array($id, $moved) || !$desc = Section::find($id))
                 continue;
             $desc->sort_order = $position;
             $desc->save();

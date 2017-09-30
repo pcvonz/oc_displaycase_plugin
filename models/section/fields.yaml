@@ -1,11 +1,11 @@
 fields:
-    descr_title:
-        label: 'vonzimmerman.displaycase::lang.description.title'
+    section_title:
+        label: 'vonzimmerman.displaycase::lang.section.title'
         oc.commentPosition: ''
         span: auto
         type: text
-    descr:
-        label: 'vonzimmerman.displaycase::lang.description.section'
+    section:
+        label: 'vonzimmerman.displaycase::lang.section.section'
         size: ''
         oc.commentPosition: ''
         span: full

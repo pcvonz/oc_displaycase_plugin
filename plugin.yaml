@@ -14,15 +14,11 @@ navigation:
         url: vonzimmerman/displaycase/items
         icon: icon-life-ring
         sideMenu:
-            side-menu-item:
-                label: 'vonzimmerman.displaycase::lang.item.tags'
-                url: vonzimmerman/displaycase/tags
-                icon: icon-tag
-            side-menu-item2:
+            items:
                 label: 'vonzimmerman.displaycase::lang.item.manage'
                 url: vonzimmerman/displaycase/items
                 icon: icon-film
-            Sections:
-                label: 'vonzimmerman.displaycase::lang.description.section'
-                url: vonzimmerman/displaycase/description
-                icon: icon-sitemap
+            tags:
+                label: 'vonzimmerman.displaycase::lang.item.tags'
+                url: vonzimmerman/displaycase/tags
+                icon: icon-tag
