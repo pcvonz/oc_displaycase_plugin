@@ -7,3 +7,33 @@
     - builder_table_create_vonzimmerman_displaycase_tag.php
     - builder_table_create_vonzimmerman_displaycase_tagmap.php
     - builder_table_create_vonzimmerman_displaycase_section.php
+1.0.3:
+    - 'Created table vonzimmerman_displaycase_profile'
+    - builder_table_create_vonzimmerman_displaycase_profile.php
+1.0.4:
+    - 'Created table vonzimmerman_displaycase_link'
+    - builder_table_create_vonzimmerman_displaycase_link.php
+1.0.5:
+    - 'Updated table vonzimmerman_displaycase_link'
+    - builder_table_update_vonzimmerman_displaycase_link.php
+1.0.6:
+    - 'Updated table vonzimmerman_displaycase_profile'
+    - builder_table_update_vonzimmerman_displaycase_profile.php
+1.0.7:
+    - 'Updated table vonzimmerman_displaycase_link'
+    - builder_table_update_vonzimmerman_displaycase_link_2.php
+1.0.8:
+    - 'Updated table vonzimmerman_displaycase_link'
+    - builder_table_update_vonzimmerman_displaycase_link_3.php
+1.0.9:
+    - 'Updated table vonzimmerman_displaycase_link'
+    - builder_table_update_vonzimmerman_displaycase_link_4.php
+1.0.10:
+    - 'Updated table vonzimmerman_displaycase_link'
+    - builder_table_update_vonzimmerman_displaycase_link_5.php
+1.0.11:
+    - 'Updated table vonzimmerman_displaycase_profile'
+    - builder_table_update_vonzimmerman_displaycase_profile_2.php
+1.0.12:
+    - 'Updated table vonzimmerman_displaycase_profile'
+    - builder_table_update_vonzimmerman_displaycase_profile_3.php

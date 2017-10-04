@@ -1,0 +1,7 @@
+columns:
+    name:
+        label: 'vonzimmerman.displaycase::lang.link.name'
+        type: text
+    url:
+        label: 'vonzimmerman.displaycase::lang.link.url'
+        type: text

@@ -31,6 +31,7 @@ class ItemPage extends ComponentBase
     {
         return Item::with(['tags', 'screenshot', 'banner', 'thumbnail', 'section'])
             ->where('published', 1)
+            ->orderBy('sort_order', 'asc')
             ->where('slug', $pageName)
             ->first();
     }

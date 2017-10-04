@@ -19,6 +19,8 @@
         'thumbnail' => 'Thumbnail',
         'section' => 'Section',
         'short_description' => 'Short Description',
+        'date' => 'Date',
+        'sort' => 'Sort Order',
     ],
     'tags' => [
         'add' => 'Add Tags',
@@ -26,5 +28,22 @@
     'section' => [
         'section' => 'Section',
         'title' => 'Title',
+    ],
+    'Items' => [
+        'Reorder' => 'Reorder Items',
+    ],
+    'profile' => [
+        'name' => 'Name',
+        'occupation' => 'Occupation',
+        'description' => 'Description',
+        'profile' => 'Profile',
+        'profile_key' => 'Profile Key',
+        'profile_image' => 'Profile Image',
+    ],
+    'link' => [
+        'link' => 'Link',
+        'name' => 'Name',
+        'url' => 'URL',
+        'icon' => 'Icon',
     ],
 ];

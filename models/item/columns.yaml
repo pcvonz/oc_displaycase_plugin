@@ -1,4 +1,9 @@
 columns:
+    sort_order:
+        label: 'vonzimmerman.displaycase::lang.item.sort'
+        type: text
+        searchable: true
+        sortable: true
     title:
         label: 'vonzimmerman.displaycase::lang.item.title'
         type: text
@@ -17,6 +22,6 @@ columns:
         relation: tags
     published:
         label: 'vonzimmerman.displaycase::lang.item.published'
-        type: text
+        type: switch 
         searchable: true
         sortable: true

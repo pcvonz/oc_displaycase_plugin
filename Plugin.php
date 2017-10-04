@@ -20,7 +20,8 @@ class Plugin extends PluginBase
         return [
             'Vonzimmerman\DisplayCase\Components\FeaturedPage' => 'featuredPage',
             'Vonzimmerman\DisplayCase\Components\ItemGrid'     => 'itemGrid',
-            'Vonzimmerman\DisplayCase\Components\ItemPage'     => 'itemPage'
+            'Vonzimmerman\DisplayCase\Components\ItemPage'     => 'itemPage',
+            'Vonzimmerman\DisplayCase\Components\Profile'     => 'Profile'
         ];
     }
 

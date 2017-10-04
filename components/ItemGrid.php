@@ -45,7 +45,8 @@ class ItemGrid extends ComponentBase
     {
         return [
             'title' =>'Title', 
-            'tags' => 'Tags'
+            'tags' => 'Tags',
+            'sort_order' => 'Sort Order'
         ];
     }
     public function getDirectionOptions() 

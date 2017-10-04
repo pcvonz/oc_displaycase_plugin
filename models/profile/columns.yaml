@@ -1,0 +1,7 @@
+columns:
+    name:
+        label: 'vonzimmerman.displaycase::lang.profile.name'
+        type: text
+    occupation:
+        label: 'vonzimmerman.displaycase::lang.profile.occupation'
+        type: text

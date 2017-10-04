@@ -1,0 +1,21 @@
+fields:
+    name:
+        label: 'vonzimmerman.displaycase::lang.link.name'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    url:
+        label: 'vonzimmerman.displaycase::lang.link.url'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    icon:
+        label: 'vonzimmerman.displaycase::lang.link.icon'
+        oc.commentPosition: ''
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

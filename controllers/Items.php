@@ -11,11 +11,13 @@ class Items extends Controller
         'Backend\Behaviors\ListController',
         'Backend\Behaviors\FormController',
         'Backend\Behaviors\RelationController',
+        'Backend\Behaviors\ReorderController',
    ];
     
     public $formConfig = 'config_item_form.yaml';
     public $listConfig = ['items' => 'config_items_list.yaml'];
     public $relationConfig = 'config_relation.yaml';
+    public $reorderConfig = 'config_reorder.yaml';
 
     public function __construct()
     {
@@ -23,15 +25,11 @@ class Items extends Controller
         $this->addJs("/plugins/vonzimmerman/displaycase/assets/javscript/sortable.js");
         parent::__construct();
         BackendMenu::setContext('Vonzimmerman.DisplayCase', 'main-menu-item', 'side-menu-item2');
-        // TODO: Sort the fields when the request is done
-        Event::listen('backend.list.extendQuery', function($widget, $field)
-        {
-        });
     }
-    public function onReorder() 
+    public function onRelationReorder() 
     {
         $data = post();
-        $records = $data['vals'];
+        $records = $data['record_ids'];
         $position = 0;
         $moved = [];
         foreach ($records as $id) {

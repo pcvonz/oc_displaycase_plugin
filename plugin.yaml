@@ -22,3 +22,7 @@ navigation:
                 label: 'vonzimmerman.displaycase::lang.item.tags'
                 url: vonzimmerman/displaycase/tags
                 icon: icon-tag
+            profile:
+                label: 'vonzimmerman.displaycase::lang.profile.profile'
+                url: vonzimmerman/displaycase/profile
+                icon: icon-user

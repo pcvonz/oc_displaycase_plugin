@@ -1,0 +1,17 @@
+<div id="home" class="individual-headshot fadein "> 
+  <h2 class="highlight bk-coolblack">{{ profile.name }}</h2>
+  <div class="profile">
+    <img src="{{ profile.profile_image.path }}"/>
+  </div>
+  <div class="profile-info">
+    <h2 class="left-border"> {{ profile.occupation }}</h2> 
+    <p class="left-border">  
+      {{ profile.description|raw }}
+    </p>
+  </div>
+  <a class="arrow" href="#{{ items[0].slug }}">
+    <svg role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_down"/>
+    </svg>
+  </a>
+</div>

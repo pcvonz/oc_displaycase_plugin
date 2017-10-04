@@ -18,8 +18,10 @@ class BuilderTableCreateVonzimmermanDisplayCaseItem extends Migration
             $table->string('license')->nullable();
             $table->string('title')->nullable();
             $table->string('slug')->nullable();
+            $table->dateTime('item_date')->nullable();
             $table->dateTime('date_added')->nullable();
             $table->boolean('published')->nullable()->default(0);
+            $table->integer('sort_order')->unsigned();
         });
     }
     

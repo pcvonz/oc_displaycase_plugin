@@ -1,67 +1,84 @@
-fields:
-    title:
-        label: 'vonzimmerman.displaycase::lang.item.title'
-        oc.commentPosition: ''
-        span: auto
-        type: text
-    slug:
-        label: 'vonzimmerman.displaycase::lang.item.slug'
-        oc.commentPosition: ''
-        span: auto
-        required: 0
-        preset: title
-        type: text
-    short_description:
-        label: 'vonzimmerman.displaycase::lang.item.short_description'
-        oc.commentPosition: ''
-        span: auto
-        type: richeditor
-    banner:
-        label: 'vonzimmerman.displaycase::lang.item.banner'
-        oc.commentPosition: ''
-        mode: image
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: auto
-        type: fileupload
-    thumbnail:
-        label: 'vonzimmerman.displaycase::lang.item.thumbnail'
-        oc.commentPosition: ''
-        mode: image
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: auto
-        type: fileupload
-    screenshot:
-        label: 'vonzimmerman.displaycase::lang.item.screenshot'
-        oc.commentPosition: ''
-        mode: image
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: auto
-        type: fileupload
-    tags:
-        label: 'vonzimmerman.displaycase::lang.item.tags'
-        type: taglist
-        mode: relation
-        customTags: false
-        separator: space
-        size: ''
-        oc.commentPosition: ''
-        span: auto
-    section:
-        label: Descriptions
-        commentAbove: RelationController used as a partial field type.
-        type: partial
-        tab: Comments
-
-    published:
-        label: 'vonzimmerman.displaycase::lang.item.published'
-        span: auto
-        type: switch
+tabs:
+    fields:
+        title:
+            label: 'vonzimmerman.displaycase::lang.item.title'
+            oc.commentPosition: ''
+            span: auto
+            type: text
+            tab: Main
+        slug:
+            label: 'vonzimmerman.displaycase::lang.item.slug'
+            oc.commentPosition: ''
+            span: auto
+            required: 0
+            preset: title
+            type: text
+            tab: Main
+        item_date:
+            label: 'vonzimmerman.displaycase::lang.item.date'
+            span: auto
+            oc.commentPosition: ''
+            mode: datetime
+            type: datepicker
+            tab: Main
+        published:
+            label: 'vonzimmerman.displaycase::lang.item.published'
+            span: auto
+            type: switch
+            tab: Main
+        short_description:
+            label: 'vonzimmerman.displaycase::lang.item.short_description'
+            oc.commentPosition: ''
+            span: full
+            size: ''
+            type: richeditor
+            tab: Main
+        tags:
+            label: 'vonzimmerman.displaycase::lang.item.tags'
+            type: taglist
+            mode: relation
+            customTags: false
+            separator: space
+            size: ''
+            oc.commentPosition: ''
+            span: auto
+            tab: Main
+        banner:
+            label: 'vonzimmerman.displaycase::lang.item.banner'
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Images
+        screenshot:
+            label: 'vonzimmerman.displaycase::lang.item.screenshot'
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Images
+        thumbnail:
+            label: 'vonzimmerman.displaycase::lang.item.thumbnail'
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Images
+        section:
+            label: Descriptions
+            commentAbove: 'Add content to item.'
+            type: partial
+            tab: Content
+            span: auto

@@ -9,7 +9,7 @@ function initializeSorting() {
               var $inputs = $('.index_reposition').map(function () {
                 return $(this).val(); 
               }).get();
-              $.request('onReorder', {
+              $.request('onRelationReorder', {
                 data: {vals: $inputs},
                 success: initializeSorting()
               });

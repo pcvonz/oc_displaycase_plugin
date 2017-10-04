@@ -9,6 +9,7 @@ use Vonzimmerman\DisplayCase\Models\Section as Section;
 class Item extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use \October\Rain\Database\Traits\Sortable;
     
     /*
      * Disable timestamps by default.

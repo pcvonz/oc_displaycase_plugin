@@ -1,5 +1,6 @@
 section:
     label: 'vonzimmerman.displaycase::lang.item.section'
+    span: full
     manage:
       context: relation
       form: $/vonzimmerman/displaycase/models/section/fields.yaml

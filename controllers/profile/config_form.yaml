@@ -1,0 +1,10 @@
+name: Profile
+form: $/vonzimmerman/displaycase/models/profile/fields.yaml
+modelClass: Vonzimmerman\DisplayCase\Models\Profile
+defaultRedirect: vonzimmerman/displaycase/profile
+create:
+    redirect: 'vonzimmerman/displaycase/profile/update/:id'
+    redirectClose: vonzimmerman/displaycase/profile
+update:
+    redirect: vonzimmerman/displaycase/profile
+    redirectClose: vonzimmerman/displaycase/profile

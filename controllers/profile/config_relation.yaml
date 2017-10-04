@@ -1,0 +1,12 @@
+links:
+    label: 'vonzimmerman.displaycase::lang.link.link'
+    span: full
+    manage:
+      context: relation
+      form: $/vonzimmerman/displaycase/models/links/fields.yaml
+    defaultSort:
+      column: sort_order
+      direction: asc
+    view:
+      list: $/vonzimmerman/displaycase/models/links/columns.yaml
+      toolbarButtons: create|delete|remove
