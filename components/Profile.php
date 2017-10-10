@@ -19,11 +19,20 @@ class Profile extends ComponentBase
             'profile' => [
                 'title' => 'Display a profile',
                 'description' => 'Profile description',
-                'type' => 'string',
+                'type' => 'dropdown',
                 'default' => '[Type profile key]',
                 'placeholder' => 'Select profile to display',
+                'options' => $this->getProfiles()
             ],
         ];
+    }
+    public function getProfiles() {
+        $profileKeys = [];
+        $profiles = Profiles::get();
+        foreach ($profiles as $p) {
+            $profileKeys[$p['profile_key']] = $p['profile_key'];
+        }
+        return $profileKeys;
     }
     public function profile() {
         return Profiles::with(['profile_image', 'links'])

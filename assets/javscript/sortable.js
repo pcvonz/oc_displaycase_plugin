@@ -10,7 +10,7 @@ function initializeSorting() {
                 return $(this).val(); 
               }).get();
               $.request('onRelationReorder', {
-                data: {vals: $inputs},
+                data: {record_ids: $inputs},
                 success: initializeSorting()
               });
           }

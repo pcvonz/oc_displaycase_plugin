@@ -58,7 +58,8 @@ class ItemGrid extends ComponentBase
     }
     public function queryDb($skip)
     {
-        return Item::with(['tags', 'screenshot', 'banner', 'thumbnail'])->where('published', 1)
+        return Item::with(['tags', 'screenshot', 'banner', 'thumbnail'])
+            ->where('published', 1)
             ->has('tags')
             ->orderBy($this->property('category'), $this->property('direction'))
             ->offset($skip)

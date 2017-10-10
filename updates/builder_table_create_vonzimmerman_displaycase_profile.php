@@ -10,10 +10,12 @@ class BuilderTableCreateVonzimmermanDisplaycaseProfile extends Migration
         Schema::create('vonzimmerman_displaycase_profile', function($table)
         {
             $table->engine = 'InnoDB';
+            $table->increments('id')->unsigned();
             $table->text('name');
             $table->text('occupation');
             $table->text('description');
             $table->text('links');
+            $table->string('profile_key');
         });
     }
     

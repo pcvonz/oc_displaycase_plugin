@@ -37,3 +37,6 @@
 1.0.12:
     - 'Updated table vonzimmerman_displaycase_profile'
     - builder_table_update_vonzimmerman_displaycase_profile_3.php
+1.0.13:
+    - 'Updated table vonzimmerman_displaycase_item'
+    - builder_table_update_vonzimmerman_displaycase_item.php

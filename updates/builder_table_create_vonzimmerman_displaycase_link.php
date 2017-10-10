@@ -10,9 +10,12 @@ class BuilderTableCreateVonzimmermanDisplaycaseLink extends Migration
         Schema::create('vonzimmerman_displaycase_link', function($table)
         {
             $table->engine = 'InnoDB';
+            $table->increments('id')->unsigned();
             $table->string('name');
             $table->string('url');
             $table->binary('icon');
+            $table->integer('sort_order')->unsigned();
+            $table->integer('profile_id')->unsigned();
         });
     }
     

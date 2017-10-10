@@ -21,6 +21,7 @@
         'short_description' => 'Short Description',
         'date' => 'Date',
         'sort' => 'Sort Order',
+        'link' => 'Link',
     ],
     'tags' => [
         'add' => 'Add Tags',
