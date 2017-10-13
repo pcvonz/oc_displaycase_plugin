@@ -12,7 +12,9 @@ class Plugin extends PluginBase
             'description' => 'vonzimmerman.displaycase::lang.plugin.description',
             'author'      => 'Robert Vonzimmerman, Paul Vonzimmerman',
             'icon'        => 'icon-pencil',
-            'homepage'    => ''
+            'homepage'    => 'https://github.com/pcvonz/oc_displaycase_plugin',
+            'description' => 'Manage everything you\'d want for a portfolio website.'
+
         ];
     }
     public function registerComponents()
@@ -27,12 +29,6 @@ class Plugin extends PluginBase
         ];
     }
 
-    public function registerFormWidgets()
-    {
-        return [
-            'Vonzimmerman\DisplayCase\FormWidgets\RichTextToc' => 'richtexttoc'
-        ];
-    }
     public function registerSettings()
     {
     }

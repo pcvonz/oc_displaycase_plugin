@@ -2,6 +2,7 @@
 
 use Cms\Classes\ComponentBase;
 use Vonzimmerman\DisplayCase\Models\Item as Item;
+use Vonzimmerman\DisplayCase\Models\Tags as Tags;
 
 class ItemGrid extends ComponentBase
 {
@@ -9,7 +10,7 @@ class ItemGrid extends ComponentBase
     {
         return [
             'name'        => 'ItemGrid Component',
-            'description' => 'No description provided yet...'
+            'description' => 'Display items in a grid'
         ];
     }
 
@@ -39,6 +40,13 @@ class ItemGrid extends ComponentBase
                 'validationPattern' => '^[0-9]+$',
                 'validationMessage' => 'The Limit Items property can contain only numeric symbols'
             ],
+            'filter' => [
+                'title' => 'Filter',
+                'description' => 'Filter by tag',
+                'type' => 'dropdown',
+                'placeholder' => 'Select how many items to display',
+                'options' => $this->getTags()
+            ],
         ];
     }
     public function getCategoryOptions() 
@@ -58,13 +66,26 @@ class ItemGrid extends ComponentBase
     }
     public function queryDb($skip)
     {
-        return Item::with(['tags', 'screenshot', 'banner', 'thumbnail'])
+        $result = Item::with(['tags', 'screenshot', 'banner', 'thumbnail'])
             ->where('published', 1)
             ->has('tags')
-            ->orderBy($this->property('category'), $this->property('direction'))
-            ->offset($skip)
-            ->limit($this->property('limit'))
-            ->get();
+            ->orderBy($this->property('category'), $this->property('direction'));
+        if($this->property('filter') != 'No Filter') {
+            $result = $result->whereHas('tags', function ($query) {
+                $query->where('name', $this->property('filter'));
+            });
+        }
+        $result = $result->offset($skip*$this->property('limit'))->limit($this->property('limit'))->get();
+        return  $result;
+    }
+    public function getTags() {
+        $tagNames = [];
+        $tagNames['No filter'] = 'No Filter';
+        $Tags = Tags::get();
+        foreach ($Tags as $t) {
+            $tagNames[$t['name']] = $t['name'];
+        }
+        return $tagNames;
     }
     public function onUpdatePartial() 
     {
@@ -82,8 +103,8 @@ class ItemGrid extends ComponentBase
         $this->addJs('/plugins/vonzimmerman/displaycase/assets/bower_components/jscroll/jquery.jscroll.js');
         $this->addJs('/plugins/vonzimmerman/displaycase/assets/javscript/ItemGrid.js');
         $this->addCss('/plugins/vonzimmerman/displaycase/assets/css/ItemGrid.css');
-        $items = $this->queryDb(0);
         $pageId = $this->param('page_id');
+        $items = $this->queryDb($pageId);
         $this->page['page_id'] = $pageId+1;
         $this->page['initialOffset'] = $this->property('limit');
         $this->page['items'] = $items;
