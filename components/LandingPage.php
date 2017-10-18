@@ -9,7 +9,7 @@ class LandingPage extends ComponentBase
     {
         return [
             'name'        => 'LandingPage Component',
-            'description' => 'No description provided yet...'
+            'description' => 'This component injects portfolio items into your page'
         ];
     }
 
@@ -47,7 +47,7 @@ class LandingPage extends ComponentBase
     }
     public function onRun()
     {
-        $items = $this->queryDb('robert');
+        $items = $this->queryDb();
         $this->page['items'] = $items;
     }
 }

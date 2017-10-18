@@ -20,8 +20,6 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Vonzimmerman\DisplayCase\Components\FeaturedPage' => 'featuredPage',
-            'Vonzimmerman\DisplayCase\Components\ItemGrid'     => 'itemGrid',
             'Vonzimmerman\DisplayCase\Components\ItemPage'     => 'itemPage',
             'Vonzimmerman\DisplayCase\Components\Profile'     => 'Profile',
             'Vonzimmerman\DisplayCase\Components\LandingPage'     => 'landingPage',

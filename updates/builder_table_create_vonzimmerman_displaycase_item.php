@@ -15,7 +15,6 @@ class BuilderTableCreateVonzimmermanDisplayCaseItem extends Migration
             $table->text('short_description')->nullable();
             $table->string('url')->nullable();
             $table->string('tags')->nullable();
-            $table->string('license')->nullable();
             $table->string('title')->nullable();
             $table->string('slug')->nullable();
             $table->dateTime('item_date')->nullable();

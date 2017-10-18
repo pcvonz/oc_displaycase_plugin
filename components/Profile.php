@@ -9,7 +9,7 @@ class Profile extends ComponentBase
     {
         return [
             'name'        => 'Profile Component',
-            'description' => 'No description provided yet...'
+            'description' => 'Adds a widget with your personal information'
         ];
     }
 

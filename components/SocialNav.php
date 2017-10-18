@@ -9,7 +9,7 @@ class SocialNav extends ComponentBase
     {
         return [
             'name'        => 'SocialNav Component',
-            'description' => 'No description provided yet...'
+            'description' => 'Nifty looking nav'
         ];
     }
 

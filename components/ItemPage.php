@@ -10,7 +10,7 @@ class ItemPage extends ComponentBase
     {
         return [
             'name'        => 'ItemPage Component',
-            'description' => 'No description provided yet...'
+            'description' => 'Injects specific item pages assets into a page (based on url pattern)'
         ];
     }
 
