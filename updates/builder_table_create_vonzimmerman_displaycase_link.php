@@ -15,7 +15,7 @@ class BuilderTableCreateVonzimmermanDisplaycaseLink extends Migration
             $table->string('url');
             $table->binary('icon');
             $table->integer('sort_order')->unsigned();
-            $table->integer('profile_id')->unsigned();
+            $table->integer('profile_id')->unsigned()->nullable();
         });
     }
     

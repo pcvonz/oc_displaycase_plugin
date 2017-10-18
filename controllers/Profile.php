@@ -20,4 +20,8 @@ class Profile extends Controller
         parent::__construct();
         BackendMenu::setContext('Vonzimmerman.DisplayCase', 'main-menu-item', 'profile');
     }
+    public function onSave()
+    {
+        $this->create();
+    }
 }

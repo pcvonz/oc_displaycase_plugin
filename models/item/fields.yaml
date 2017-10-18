@@ -43,12 +43,6 @@ tabs:
             oc.commentPosition: ''
             span: auto
             tab: Main
-        item_link:
-            label: 'vonzimmerman.displaycase::lang.item.link'
-            oc.commentPosition: ''
-            span: auto
-            type: text
-            tab: Main
         banner:
             label: 'vonzimmerman.displaycase::lang.item.banner'
             oc.commentPosition: ''

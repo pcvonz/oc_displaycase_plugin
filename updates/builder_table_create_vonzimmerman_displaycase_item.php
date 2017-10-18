@@ -18,8 +18,6 @@ class BuilderTableCreateVonzimmermanDisplayCaseItem extends Migration
             $table->string('title')->nullable();
             $table->string('slug')->nullable();
             $table->dateTime('item_date')->nullable();
-            $table->string('item_link')->nullable();
-            $table->dateTime('date_added')->nullable();
             $table->boolean('published')->nullable()->default(0);
             $table->integer('sort_order')->unsigned();
         });
