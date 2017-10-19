@@ -13,7 +13,6 @@ class BuilderTableCreateVonzimmermanDisplayCaseItem extends Migration
             $table->increments('id');
             $table->text('sections')->nullable();
             $table->text('short_description')->nullable();
-            $table->string('url')->nullable();
             $table->string('tags')->nullable();
             $table->string('title')->nullable();
             $table->string('slug')->nullable();
@@ -22,7 +21,7 @@ class BuilderTableCreateVonzimmermanDisplayCaseItem extends Migration
             $table->integer('sort_order')->unsigned();
         });
     }
-    
+
     public function down()
     {
         Schema::dropIfExists('vonzimmerman_displaycase_item');

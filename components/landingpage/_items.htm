@@ -1,13 +1,11 @@
 {% if items|length > 0 %}
-<div class="itemRow">
-    {% for item in items %}
-      <div class="item">
+  {% for item in items %}
+    <div class="item">
+      <a href="/projects/{{ item.slug }}">
         <img height="100" width="100" src="{{ item.thumbnail.path }}">
         <h2> {{ item.title }} </h2>
-      </div>
-    {% endfor %}
-    <a class="nextPage" href="http://localhost:8000/test/{{ page_id }}"> Next Page </a>
-</div>
-{% endif %}
-{% if items|length == 0 %}
+        <p> {{ item.short_description | raw}} </p>
+      </a>
+    </div>
+  {% endfor %}
 {% endif %}

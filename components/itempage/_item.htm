@@ -1,0 +1,57 @@
+{% set item = itemPage.item %}
+<div class="l-content-page">
+  <div class="banner background-primary">
+    <img src="{{ item.banner.path }}">
+  </div>
+  <div class="intro">
+    <div class="full-width">
+      <h1> {{ item.title }} </h1>
+    </div>
+    <div class="flex-row">
+      <div class="">
+        <h3> Year </h3>
+        <p>{{ item.item_date|date('Y') }}</p>
+      </div>
+      <div class="index">
+        <h3> Index </h3>
+          <ul class="block-nav nav"> 
+          {% for nav in itemPage.section %}
+            <li>
+              <a class="color-primary" href="#{{ str_snake(nav.section_title)}}">
+                {{ nav.section_title }}
+              </a>
+              <div class="background-primary"> </div>
+            </li>
+          {% endfor %}
+          </ul>
+      </div>
+      <div class="description flex-grow">
+        <h3> Short Description </h3>
+          {{ item.short_description|raw }}
+          {% if (item.item_link) %}
+            <p> <a href="{{ item.item_link }}"> View the project here </a> </p>
+          {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="written-content">
+    {% if item.screenshot %}
+      <div class="lightbox">
+      {% for img in item.screenshot %}
+        <div class="primary-border-five lightbox-item">
+          <div class="lightbox-slide">
+           <svg><use xlink:href="#icon-magnifying-glass"></use></svg> 
+          </div>
+          <img src="{{ img.path }}"/>
+        </div>
+      {% endfor %}
+      </div>
+    {% endif %}
+    {% for desc in itemPage.section %}
+      <div class="content-page-section">
+        <h2 id="{{ str_snake(desc.section_title) }}">{{ desc.section_title }}</h2>
+          {{ desc.section|raw }}
+      </div>
+    {% endfor %}
+  </div>
+</div>

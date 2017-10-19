@@ -14,11 +14,10 @@ class BuilderTableCreateVonzimmermanDisplaycaseLink extends Migration
             $table->string('name');
             $table->string('url');
             $table->binary('icon');
-            $table->integer('sort_order')->unsigned();
             $table->integer('profile_id')->unsigned()->nullable();
         });
     }
-    
+
     public function down()
     {
         Schema::dropIfExists('vonzimmerman_displaycase_link');
