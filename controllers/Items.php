@@ -24,7 +24,7 @@ class Items extends Controller
         $this->addJs("https://cdn.rawgit.com/RubaXa/Sortable/1.6.0/Sortable.min.js");
         $this->addJs("/plugins/vonzimmerman/displaycase/assets/javscript/sortable.js");
         parent::__construct();
-        BackendMenu::setContext('Vonzimmerman.DisplayCase', 'main-menu-item', 'side-menu-item2');
+        BackendMenu::setContext('Vonzimmerman.DisplayCase', 'main-menu-item', 'items');
     }
     public function onRelationReorder() 
     {

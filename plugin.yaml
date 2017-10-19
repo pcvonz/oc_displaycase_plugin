@@ -12,12 +12,12 @@ navigation:
     main-menu-item:
         label: 'vonzimmerman.displaycase::lang.plugin.title'
         url: vonzimmerman/displaycase/items
-        icon: icon-life-ring
+        icon: icon-trophy
         sideMenu:
             items:
                 label: 'vonzimmerman.displaycase::lang.item.manage'
                 url: vonzimmerman/displaycase/items
-                icon: icon-film
+                icon: icon-file-text
             tags:
                 label: 'vonzimmerman.displaycase::lang.item.tags'
                 url: vonzimmerman/displaycase/tags

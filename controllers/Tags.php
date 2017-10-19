@@ -13,6 +13,6 @@ class Tags extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Vonzimmerman.DisplayCase', 'main-menu-item', 'side-menu-item');
+        BackendMenu::setContext('Vonzimmerman.DisplayCase', 'main-menu-item', 'tags');
     }
 }
