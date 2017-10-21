@@ -16,7 +16,6 @@ class BuilderTableCreateVonzimmermanDisplaycaseProfile extends Migration
             $table->text('description');
             $table->text('links');
             $table->string('profile_key');
-            $table->text('email');
         });
     }
     

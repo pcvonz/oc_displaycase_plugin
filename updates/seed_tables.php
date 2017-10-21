@@ -61,7 +61,6 @@ Voluptates asperiores veniam voluptate qui corporis eius eum maxime. Ut maiores 
             'occupation' => 'My Occupatation',
             'description' => 'Describe what you do. Highlight <span class="background-secondary color-white">choice</span> items with this <span class="background-secondary color-white">span</span>. Hope you enjoy your new portfolio!',
             'profile_key' => 'my-key',
-            'email' => 'example@example.com'
         ]);
         $file = (new \System\Models\File)->fromFile('plugins/vonzimmerman/displaycase/avatar.png');
         $profile->profile_image()->add($file);

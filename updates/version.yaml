@@ -12,3 +12,6 @@
     - builder_table_create_vonzimmerman_displaycase_tagmap.php
     - builder_table_create_vonzimmerman_displaycase_section.php
     - seed_tables.php
+1.0.2:
+    - 'Added email field to profile'
+    - builder_table_update_vonzimmerman_displaycase_profile.php
