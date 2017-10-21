@@ -36,15 +36,17 @@
   </div>
   <div class="written-content">
     {% if item.screenshot %}
-      <div class="lightbox">
-      {% for img in item.screenshot %}
-        <div class="primary-border-five lightbox-item">
-          <div class="lightbox-slide">
-           <svg><use xlink:href="#icon-magnifying-glass"></use></svg> 
+      <div class="lightbox-container">
+        <div class="lightbox">
+        {% for img in item.screenshot %}
+          <div class="primary-border-five lightbox-item">
+            <div class="lightbox-slide">
+             <svg><use xlink:href="#icon-magnifying-glass"></use></svg> 
+            </div>
+            <img src="{{ img.path }}"/>
           </div>
-          <img src="{{ img.path }}"/>
+        {% endfor %}
         </div>
-      {% endfor %}
       </div>
     {% endif %}
     {% for desc in itemPage.section %}

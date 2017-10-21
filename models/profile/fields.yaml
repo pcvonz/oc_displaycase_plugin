@@ -20,11 +20,9 @@ fields:
         oc.commentPosition: ''
         span: auto
         type: text
-    links:
-        label: 'vonzimmerman.displaycase::lang.profile.profile'
-        commentAbove: 'Add links to your home page'
-        type: partial
-        tab: Content
+    email:
+        label: 'vonzimmerman.displaycase::lang.profile.email'
+        mode: text
         span: auto
     profile_image:
         label: 'vonzimmerman.displaycase::lang.profile.profile_image'
@@ -36,3 +34,9 @@ fields:
             extension: auto
         span: auto
         type: fileupload
+    links:
+        label: 'vonzimmerman.displaycase::lang.profile.profile'
+        commentAbove: 'Add links to your home page'
+        type: partial
+        tab: Content
+        span: full 

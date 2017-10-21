@@ -1,5 +1,12 @@
 let lightBoxContent = document.querySelectorAll('.lightbox > *')
+let lightBoxContainer = document.querySelector('.lightbox-container')
 
+window.onload = function () {
+  lightBoxContainer.setAttribute('style', 'height: ' + document.querySelector('.lightbox').offsetHeight + 'px')
+}
+window.addEventListener('resize', function () {
+  lightBoxContainer.setAttribute('style', 'height: ' + document.querySelector('.lightbox').offsetHeight + 'px')
+});
 lightBoxContent.forEach((el) => {
   el.addEventListener('click', () => {
     enlargeSelf(el)
@@ -13,14 +20,17 @@ function enlargeSelf (el) {
       lb.style = 'display: none'
     })
     el.style = `
-    width: 80%;
+    width: auto;
+    max-width: 80vw;
     display: block`
     el.querySelector('svg').innerHTML = '<use xlink:href="#icon-circle-x"></use>'
     el.parentNode.style = `
         position: fixed;
         left: 0;
         top: 0;
-        height: 100%;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
     `
     el.parentNode.className = `lightbox background-primary-transparent`
   } else {

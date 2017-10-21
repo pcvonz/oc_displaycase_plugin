@@ -56,5 +56,8 @@ class SocialNav extends ComponentBase
             $retLink[] = $temp;
         }
         $this->page['links'] = $retLink;
+        $this->page['email'] = Profiles::where('profile_key', $this->property('profile'))
+            ->first()->email;
+
     }
 }

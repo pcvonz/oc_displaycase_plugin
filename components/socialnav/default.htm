@@ -9,4 +9,14 @@
       </div>
     </a>
 {% endfor %}
+{% if email %}
+   <a target="_blank" href="mailto:{{ email }}" class="icon-link nav-item">
+      <div class="icon">
+        <img src="/plugins/vonzimmerman/displaycase/assets/images/email.svg"/>
+      </div>
+      <div class="social-text">
+        Email
+      </div>
+    </a>
+{% endif %}
 </nav>

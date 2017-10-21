@@ -40,6 +40,7 @@
         'profile' => 'Profile',
         'profile_key' => 'Profile Key',
         'profile_image' => 'Profile Image',
+        'email' => 'Email',
     ],
     'link' => [
         'link' => 'Link',
