@@ -34,7 +34,8 @@ function enlargeSelf (el) {
     el.style = `
     width: auto;
     max-width: 80vw;
-    display: block`
+    display: block;
+    height: auto;`
     el.querySelector('svg').innerHTML = '<use xlink:href="#icon-circle-x"></use>'
     el.parentNode.style = `
         position: fixed;
