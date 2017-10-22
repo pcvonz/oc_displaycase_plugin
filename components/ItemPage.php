@@ -30,6 +30,7 @@ class ItemPage extends ComponentBase
     public function onRun()
     {
         $this->addJs('/plugins/vonzimmerman/displaycase/assets/javscript/itemPage.js');
+        $this->page['landing_page'] = $this->param('landing_page');
     }
     public function queryDb($pageName)
     {
