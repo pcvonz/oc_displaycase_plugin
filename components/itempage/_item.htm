@@ -1,4 +1,5 @@
 {% set item = itemPage.item %}
+{% set prevAndNext = itemPage.prevAndNextItems %}
 <div class="l-content-page">
   <div class="banner background-primary">
     <img src="{{ item.banner.path }}">
@@ -56,4 +57,17 @@
       </div>
     {% endfor %}
   </div>
+  <div class="other-projects">
+    <a href="/projects/{{ prevAndNext.prev.slug }}/{{ sort_criteria }}/{{ tag }}/">
+      <h3>
+        {{ prevAndNext.prev.title }}
+      </h3>
+      <p> {{ prevAndNext.prev.short_description }} </p>
+    </a>
+    <a href="/projects/{{ prevAndNext.next.slug }}/{{ sort_criteria }}/{{ tag }}/">
+      <h3>
+      {{ prevAndNext.next.title }}
+      </h3>
+      <p> {{ prevAndNext.next.short_description }} </p>
+    </a>
 </div>

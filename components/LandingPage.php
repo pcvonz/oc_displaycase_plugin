@@ -24,6 +24,22 @@ class LandingPage extends ComponentBase
                 'type' => 'dropdown',
                 'placeholder' => 'Select profile to display',
                 'options' => $this->getTags()
+            ],
+           'sort_critera' => [
+                'title' => 'Sort Critera',
+                'description' => 'Choose how you would like to order the landing page items.',
+                'default' => 'sort_order',
+                'type' => 'dropdown',
+                'placeholder' => 'Select profile to display',
+                'options' => ['sort_order ' => 'Sort Order', 'item_date' => 'Item Date', 'title' => 'Title']
+            ],
+            'sort_direction' => [
+                'title' => 'Sort Direction',
+                'description' => 'Chose the direction the items are ordered by.',
+                'default' => 'asc',
+                'type' => 'dropdown',
+                'placeholder' => 'Select profile to display',
+                'options' => ['asc' => 'Ascending', 'desc' => 'Descending']
             ]
         ];
     }
@@ -42,12 +58,14 @@ class LandingPage extends ComponentBase
             ->wherehas('tags', function ($q) {
                 $q->where('name', $this->property('tag'));
             })
-            ->orderBy('sort_order', 'asc')
+            ->orderBy($this->property('sort_critera'), $this->property('sort_direction'))
             ->get();
     }
     public function onRun()
     {
         $items = $this->queryDb();
         $this->page['items'] = $items;
+        $this->page['sort_critera'] = $this->property('sort_critera');
+        $this->page['tag'] = $this->property('tag');
     }
 }

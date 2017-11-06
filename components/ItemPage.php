@@ -31,6 +31,8 @@ class ItemPage extends ComponentBase
     {
         $this->addJs('/plugins/vonzimmerman/displaycase/assets/javscript/itemPage.js');
         $this->page['landing_page'] = $this->param('landing_page');
+        $this->page['tag'] = $this->param('tag');
+        $this->page['sort_criteria'] = $this->param('sort_criteria');
     }
     public function queryDb($pageName)
     {
@@ -39,6 +41,34 @@ class ItemPage extends ComponentBase
             ->orderBy('sort_order', 'asc')
             ->where('slug', $pageName)
             ->first();
+    }
+    public function getPrevAndNextItems()
+    {
+        $items = Item::with(['tags', 'screenshot', 'banner', 'thumbnail', 'section'])
+            ->where('published', 1)
+            ->wherehas('tags', function ($q) {
+                $q->where('name', $this->param('tag'));
+            })
+            ->orderBy($this->param('sort_criteria'), 'asc')
+            ->get();
+        $project_index = 0;
+        $prevAndNext = [];
+        foreach($items as $index => $item) {
+            if($item->slug == $this->property('project')) {
+                $project_index = $index;
+                if($project_index > 0) {
+                    $prevAndNext['prev'] = $items[$project_index-1];
+                } else {
+                    $prevAndNext['prev'] = false;
+                }
+                if($project_index+1 < count($items)) {
+                    $prevAndNext['next'] = $items[$project_index+1];
+                } else {
+                    $prevAndNext['next'] = false;
+                }
+                return $prevAndNext;
+            }
+        }
     }
     public function item ()
     {

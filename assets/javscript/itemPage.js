@@ -26,7 +26,6 @@ lightBoxContent.forEach((el) => {
 })
 
 function enlargeSelf (el) {
-  console.log(el.style.display !== 'block')
   if (el.style.display !== 'block') {
     lightBoxContent.forEach((lb) => {
       lb.style = 'display: none'
@@ -35,7 +34,8 @@ function enlargeSelf (el) {
     width: auto;
     max-width: 80vw;
     display: block;
-    height: auto;`
+    height: auto; 
+    `
     el.querySelector('svg').innerHTML = '<use xlink:href="#icon-circle-x"></use>'
     el.parentNode.style = `
         position: fixed;

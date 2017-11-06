@@ -1,7 +1,7 @@
 {% if items|length > 0 %}
   {% for item in items %}
     <div class="item">
-      <a href="/projects/{{ item.slug }}">
+      <a href="/projects/{{ item.slug }}/{{ sort_critera }}/{{ tag }}">
         <img height="100" width="100" src="{{ item.thumbnail.path }}">
         <h2> {{ item.title }} </h2>
         <p> {{ item.short_description | raw}} </p>
